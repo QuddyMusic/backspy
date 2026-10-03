@@ -199,7 +199,7 @@ server; the library waits those out too.
 try:
     await bot.send(channel_id, "hello")
 except backspy.HTTPException as e:
-    print(e.status, e.code)     # e.g. 403, missing_permission
+    print(e.status, e.code)     # e.g. 403, bot_account_required
 ```
 
 `e.payload`, `e.code` and `e.details` follow the project's error format.
