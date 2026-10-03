@@ -5,8 +5,9 @@ API modeled after discord.py: event handlers via decorators, slash commands defi
 as plain functions, rate limiting, reconnection and mention parsing handled
 internally.
 
-Written against the official Backspace Bot API documentation: everything the docs
-specify is covered, nothing they don't specify is invented.
+Written against `docs/systems/bots.md` from the Bot API pull request to Backspace
+(QuddyMusic/backspace, branch `bots-api`), which is not part of upstream Backspace
+yet. The sections below list what is covered.
 
 Python 3.10+, single dependency: aiohttp. [Документация на русском](README.ru.md)
 
@@ -198,7 +199,7 @@ server; the library waits those out too.
 try:
     await bot.send(channel_id, "hello")
 except backspy.HTTPException as e:
-    print(e.status, e.code)     # e.g. 403, bot_account_required
+    print(e.status, e.code)     # e.g. 403, missing_permission
 ```
 
 `e.payload`, `e.code` and `e.details` follow the project's error format.
