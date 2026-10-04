@@ -6,7 +6,7 @@ as plain functions, rate limiting, reconnection and mention parsing handled
 internally.
 
 Written against `docs/systems/bots.md` from the Bot API pull request to Backspace
-(QuddyMusic/backspace, branch `bots-api`), which is not part of upstream Backspace
+(QuddyMusic/backspace, branch `bot-api`), which is not part of upstream Backspace
 yet. The sections below list what is covered.
 
 Python 3.10+, single dependency: aiohttp. [Документация на русском](README.ru.md)
